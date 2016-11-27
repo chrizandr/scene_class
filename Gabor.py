@@ -12,14 +12,13 @@ from cv2 import getGaussianKernel
 import numpy as np
 ################ Source ################
 
+
 # makeGaborKernel creates two Gabor filters of opposite symmetry to be used for Gabor filtering of the image
 # makeGaborKernel(gkernel , f , theta) -> he , ho
 # gkernel : numpy 2D array that contains the gaussian kernel that is to be used to create the filters
 # f : frequency of the filters
 # theta : orientation of the filter
 # he , ho : the output filters coresponding to opposite symmetry filters (he : sin wave filter , ho : cosine wave filter )
-
-
 def makeGaborKernel(gkernel,f,theta):
     he=np.arange(gkernel.size).reshape(gkernel.shape)
     ho=np.arange(gkernel.size).reshape(gkernel.shape)
