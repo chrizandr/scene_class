@@ -70,3 +70,7 @@ def powerSpectrum(img):
     p_spectrum = np.abs(fshift)
     p_spectrum = p_spectrum * p_spectrum
     return p_spectrum
+
+
+def getangle(n):
+    return (np.float64)(n*np.pi)/180
