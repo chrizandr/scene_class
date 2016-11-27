@@ -25,7 +25,7 @@ for frequency in frequencies:
         kernel = makeGaborKernel(gkernel,frequency,angle)
         G_filters.append(kernel)
 
-f = open("data/raw.csv", "wb")
+f = open("data/new.csv", "wb")
 base_dir = "/home/chris/sem5/DIP/Project/dataset/"
 sub_dirs = ["coast/" , "highway/" , "mountain/" , "street/" , "forest/" , "inside_city/" , "Opencountry/" , "tallbuilding/"]
 
@@ -48,7 +48,8 @@ for sub_dir in sub_dirs:
                     G_p = Gaborfilter(segment,filter_p)
                     G_n = Gaborfilter(segment,filter_n)
                     feature = (gamma*G_p) - (gamma*G_n)
-                    vector.append(feature.sum())
+                    vector.append(feature.mean())
+                    vector.append(feature.std())
             for i in vector:
                 f.write(str(i)+',')
             f.write(label(sub_dir)+'\n')
