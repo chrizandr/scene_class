@@ -65,12 +65,19 @@ def Gaborfilter(img, kernel):
 # img : input image
 # p_spectrum : The resultant power spectrum
 def powerSpectrum(img):
+    # ------------------------------------
     f = np.fft.fft2(img)
     fshift = np.fft.fftshift(f)
     p_spectrum = np.abs(fshift)
     p_spectrum = p_spectrum * p_spectrum
     return p_spectrum
 
-
+# ---------------------------------------------------------------------
+# getangle : function to convert an angle from degrees to radians
+# n : float(degrees) - the angle that needs to be converted to radians
+# ------------------------------------
 def getangle(n):
     return (np.float64)(n*np.pi)/180
+# ------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------
