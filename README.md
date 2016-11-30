@@ -9,9 +9,13 @@ Each dependency is stated alongside the module that is dependent on it Parts of 
 Python 2.7.x
 ***
 OpenCV 3.1 : feature_extract, normalize, Gabor
+
 scikit-learn 0.16.1 : LDA
+
 python-numpy 1.11.2 : feature_extract, normalize, Gabor, segment
+
 python-weka-wrapper 0.3.9 : classifier
+
 ***
 Instructions for each of the modules are now explained in detail:
 ***
