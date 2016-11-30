@@ -7,6 +7,8 @@
 ## Authors do not authorize commercial use of the source code                           ##
 ##########################################################################################
 
+# The following module extracts the features for a given set of images using Gabor filtering
+
 ################ Imports ################
 import cv2
 import numpy as np
@@ -46,8 +48,11 @@ f = open(folder+name, "wb")
 # ---------------------------------------------------------------------
 for sub_dir in sub_dirs:
     files = os.listdir(base_dir + sub_dir)
+    # ------------------------------------
     for name in files:
+        # ------------------------------------
         if name[-4:] == ".jpg":
+            # ------------------------------------
             print "Processing ",base_dir + sub_dir + name
             img = cv2.imread(base_dir + sub_dir + name)
             g_img = img[:,:,0] + img[:,:,1] + img[:,:,2]
@@ -55,8 +60,10 @@ for sub_dir in sub_dirs:
             ng_img = normalizeImage(g_img,'g')
             segments = segmentImage(ng_img)
             vector = list()
+            # ------------------------------------
             for segment in segments:
                 for pair in G_filters:
+                    # ------------------------------------
                     filter_p = pair[0]
                     filter_n = pair[1]
                     gamma = powerSpectrum(segment)
@@ -65,11 +72,13 @@ for sub_dir in sub_dirs:
                     feature = (gamma*G_p) - (gamma*G_n)
                     vector.append(feature.mean())
                     vector.append(feature.std())
+            # ------------------------------------
             for i in vector:
                 f.write(str(i)+',')
+            # ------------------------------------
             f.write(label(sub_dir)+'\n')
             print "No errors"
-
+            # ------------------------------------
 f.close()
 print "Done :)"
 # ------------------------------------------------------------------------------------------------------------------------------------------

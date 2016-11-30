@@ -7,6 +7,9 @@
 ## Authors do not authorize commercial use of the source code                           ##
 ##########################################################################################
 
+# The module converts a given .csv file and converts it into a .arff file to be used by the
+# classifier module.
+
 ################ Imports ################
 # No imports
 ################ Global ################

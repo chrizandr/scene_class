@@ -31,9 +31,9 @@ It is advised that all the .zip files that are downloaded be extracted in a sing
 **classifier** : The weka library is a well known data mining and machine learning library with a full set of tools for immediate research applications without much set up. The library is written in java and as such the code uses a Java Virtual Machine to emulate the classifier. The module uses data from the .arff for classification The variable "data_dir" is used to specify the path to the folder containing the data file and the "filename" variable is used to specify the name of the .arff file.
 **shuffle** : The shuffle module was necessary to enable cross-validatation evaluation of the data. The module takes the \*.csv file stored in the "filename" variable which is located in the "path" filepath. The shuffled data is stored in the same filepath under the \*\_r.csv file
 ***
-##The classification process can be invoked by execution of the classifiers module directly. There is precomputed data present in the "data/" folder that can be used for classification.
+###The classification process can be invoked by execution of the classifiers module directly. There is precomputed data present in the "data/" folder that can be used for classification.
 ***
-##The order in which execution of the Python files was done to extract the features are:
+###The order in which execution of the Python files was done to extract the features are:
 **feature_extract**: To extract the features (feature_extract uses Gabor, segment and normalize to extract the features)
 **LDA**: to transform the extracted features according to the best linear combination.
 **shuffle**: to shuffle the computed data to enable 10-fold cross-validatation of the resultant data
