@@ -5,7 +5,7 @@ from weka.core.classes import Random
 
 jvm.start()
 data_dir = "data/"
-filename = "new_r_LDA.arff"
+filename = "data_r_LDA.arff"
 
 loader = Loader(classname="weka.core.converters.ArffLoader")
 data = loader.load_file(data_dir + filename)
