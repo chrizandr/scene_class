@@ -1,6 +1,6 @@
 from sklearn.lda import LDA
 
-filenames = ["new_r"]
+filenames = ["data_r"]
 for filename in filenames:
     path = "data/"
     f = open(path+filename+".csv",'r')

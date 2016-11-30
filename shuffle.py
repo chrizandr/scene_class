@@ -1,7 +1,7 @@
 from random import shuffle
 
 path = "data/"
-filename = "new"
+filename = "data"
 
 f = open(path+filename+".csv",'r')
 data = list()
