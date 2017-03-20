@@ -40,4 +40,4 @@ It is advised that all the .zip files that are downloaded be extracted in a sing
 **shuffle**: to shuffle the computed data to enable 10-fold cross-validatation of the resultant data
 **classifier**: to classify the data according to Nearest Neighbour Classifier with 10 fold cross-validatation
 ***
-________________________________________________________________________________________________
+
