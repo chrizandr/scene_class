@@ -1,10 +1,10 @@
 # scene_class
 ____________________________________________________________________________________________________
-###The following is a \*.md file and there are syntax insertions that may be misread as content.
-###To view the file correctly, please go to https://github.com/chrizandr/scene_class
+### The following is a \*.md file and there are syntax insertions that may be misread as content.
+### To view the file correctly, please go to https://github.com/chrizandr/scene_class
 ____________________________________________________________________________________________________
-The following are the dependencies required before the code can be properly executed:
-Each dependency is stated alongside the module that is dependent on it Parts of the code may be run without installing all the dependencies. The only dependency that all the modules need is the Python interpreter.
+The dependencies required before the code can be properly executed:
+Each dependency is stated alongside the module that is dependent on it. Parts of the code may be run without installing all the dependencies. The only dependency that all the modules need is the Python interpreter.
 ***
 **Python 2.7.x**
 ***
@@ -19,7 +19,7 @@ Each dependency is stated alongside the module that is dependent on it Parts of 
 ***
 Instructions for each of the modules are now explained in detail:
 ***
-**feature_extract** : The module acceses the dataset and extract features from each image in the dataset. The dataset can be downloaded from http://cvcl.mit.edu/database.htm
+**feature_extract** : The module acceses the dataset and extract features from each image in the dataset. The dataset can be downloaded from http://cvcl.mit.edu/database.htm .
 It is advised that all the .zip files that are downloaded be extracted in a single folder. The module is programmed to access the "base\_dir" folder on the system where each of the dataset folders are located. The folder names of the dataset are stored in the "sub\_dirs" variable. The values are the default names of the folders. Any change in the names must also be changed accordingly in the module. The package by default has a "data/" folder where the results of the feature extraction process are stored in "data.csv" The name of the file can be changed by modifying the "name" variable in the module.
 ***
 **Gabor, segment, normalize** : These modules do not perform any function on their own, but are used by the feature\_extract module and must be kept in the same package as that of the feature_extract module. The \_\_init\_\_.py file specifies the folder to be treated as a python package.
@@ -32,13 +32,12 @@ It is advised that all the .zip files that are downloaded be extracted in a sing
 ***
 **shuffle** : The shuffle module was necessary to enable cross-validatation evaluation of the data. The module takes the \*.csv file stored in the "filename" variable which is located in the "path" filepath. The shuffled data is stored in the same filepath under the \*\_r.csv file
 ***
-###The classification process can be invoked by execution of the classifiers module directly. There is precomputed data present in the "data/" folder that can be used for classification.
+### The classification process can be invoked by execution of the classifiers module directly. There is precomputed data present in the "data/" folder that can be used for classification.
 ***
-###The order in which execution of the Python files was done to extract the features are:
+### The order in which execution of the Python files was done to extract the features are:
 **feature_extract**: To extract the features (feature_extract uses Gabor, segment and normalize to extract the features)
 **LDA**: to transform the extracted features according to the best linear combination.
 **shuffle**: to shuffle the computed data to enable 10-fold cross-validatation of the resultant data
 **classifier**: to classify the data according to Nearest Neighbour Classifier with 10 fold cross-validatation
 ***
-###This project is a joint effort by Team 1 for the DIP course at IIIT Sri City.
 ________________________________________________________________________________________________
